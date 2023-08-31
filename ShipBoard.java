@@ -3,12 +3,12 @@ import java.util.Random;
 
 class ShipBoard
 {
-	private int[] size={2,3,3,4,5}; // the sizes oh each ship in the game, reduced every time one gets hit
+	private int[] size={2,3,3,4,5}; // the sizes of each ship in the game, reduced every time one gets hit
 	private int[][] ships=new int[10][10]; // the game board will be a 10x10 matrix of integers, where 0 represents empty space and each ship is represented by its size number in each block
 	private boolean[][] hitShips=new boolean[10][10]; // pos true for hit, false for never hit
 	private boolean lastSankShip=false; 
 	
-	private void enterShipRandomly(int id) // enter one ship in a random position (the computer us that)
+	private void enterShipRandomly(int id) // enter one ship in a random position (the computer uses that)
 	{
 		String direction;
 		Random randomGenerator=new Random();
@@ -176,7 +176,7 @@ class ShipBoard
 		return false;
 	}
 	
-	public boolean allShipsSank() // returns true if every ship has been hit, used for finising the game
+	public boolean allShipsSank() // returns true if every ship has been hit, used for finishing the game
 	{
 		for(int i=0;i<5;i++)
 		{
